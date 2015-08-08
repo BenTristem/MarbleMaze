@@ -15,7 +15,7 @@ public class TiltControl : MonoBehaviour {
 	void Update () {
 		Vector3 inputValue;
 
-		inputValue.x = CrossPlatformInputManager.GetAxis ("Vertical");
+		inputValue.x = -CrossPlatformInputManager.GetAxis ("Vertical");
 		inputValue.y = 0f;
 		inputValue.z = CrossPlatformInputManager.GetAxis ("Horizontal");
 
