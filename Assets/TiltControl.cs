@@ -18,5 +18,7 @@ public class TiltControl : MonoBehaviour {
 		inputValue.z = CrossPlatformInputManager.GetAxis ("Horizontal");
 
 		print (inputValue.x + " , " + inputValue.z);
+
+		transform.eulerAngles = inputValue;
 	}
 }
