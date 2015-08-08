@@ -4,6 +4,8 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class TiltControl : MonoBehaviour {
 
+	public float sensitivity = 90f;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -19,6 +21,6 @@ public class TiltControl : MonoBehaviour {
 
 		print (inputValue.x + " , " + inputValue.z);
 
-		transform.eulerAngles = inputValue;
+		transform.eulerAngles = inputValue * sensitivity;
 	}
 }
