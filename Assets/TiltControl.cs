@@ -11,6 +11,12 @@ public class TiltControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		print (CrossPlatformInputManager.GetAxis ("Vertical")) ;
+		Vector3 inputValue;
+
+		inputValue.x = CrossPlatformInputManager.GetAxis ("Vertical");
+		inputValue.y = 0f;
+		inputValue.z = CrossPlatformInputManager.GetAxis ("Horizontal");
+
+		print (inputValue.x + " , " + inputValue.z);
 	}
 }
